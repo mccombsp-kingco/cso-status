@@ -13,7 +13,7 @@ $(document).ready(function() {
     northEast = L.latLng(47.734705, -122.169342),
     bounds = L.latLngBounds(southWest, northEast);
 
-    var tileLayer = L.tileLayer('/gisdata/tiles/langley-2nd-street-2014/{z}/{x}/{y}.png', {foo: 'bar', tms: true, minZoom:1, maxZoom:22, bounds:bounds}).addTo(map); //adding self generated image
+    var tileLayer = L.tileLayer('/gisdata/tiles/langley-2nd-street-2014/{z}/{x}/{y}.png', {foo: 'bar', tms: true, minZoom:1, maxZoom:22, bounds:bounds}).addTo(map); //adding self generated image from quadcopter
 
 
     layerControl = L.control.layers({
