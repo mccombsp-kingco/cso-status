@@ -3,7 +3,7 @@ var autocompdata = [];
 
 $(document).ready(function() {
 
-    var map = L.map('map', {maxZoom: 22}).setView([48.03, -122.4085], 14);
+    var map = L.map('map', {maxZoom: 22}).setView([48.03, -122.4085], 14); //center of map
 
     var featureLayer = L.mapbox.featureLayer()
         .loadURL('/gisdata/geojson/citylimitsline_4326.geojson')
@@ -13,7 +13,8 @@ $(document).ready(function() {
     northEast = L.latLng(48.040085, -122.405913),
     bounds = L.latLngBounds(southWest, northEast);
 
-    var tileLayer = L.tileLayer('/gisdata/tiles/langley-2nd-street-2014/{z}/{x}/{y}.png', {foo: 'bar', tms: true, minZoom:1, maxZoom:22, bounds:bounds}).addTo(map);
+    var tileLayer = L.tileLayer('/gisdata/tiles/langley-2nd-street-2014/{z}/{x}/{y}.png', {foo: 'bar', tms: true, minZoom:1, maxZoom:22, bounds:bounds}).addTo(map); //adding self generated image
+
 
     layerControl = L.control.layers({
         'Base Map': L.mapbox.tileLayer('examples.map-i87786ca').addTo(map),
