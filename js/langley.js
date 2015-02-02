@@ -3,7 +3,8 @@ var autocompdata = [];
 
 $(document).ready(function() {
 
-    var map = L.map('map', {maxZoom: 22}).setView([48.03, -122.4085], 14); //center of map
+    var map = L.map('map', {maxZoom: 22}).setView([47.6168, -122.3348], 12); //center of map in seattle
+    //coord from geojson.io site: -122.3348, 47.6168
 
     var featureLayer = L.mapbox.featureLayer()
         .loadURL('/gisdata/geojson/citylimitsline_4326.geojson')
