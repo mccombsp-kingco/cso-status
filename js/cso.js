@@ -3,7 +3,7 @@ var autocompdata = [];
 
 $(document).ready(function() {
 
-    var map = L.map('map', {maxZoom: 22}).setView([48.03, -122.4085], 14);
+    var map = L.map('map', {maxZoom: 22}).setView([47.619124, -122.3272], 12);
 
     var featureLayer = L.mapbox.featureLayer()
         .loadURL('/data_display/cso_test_file.geojson')
