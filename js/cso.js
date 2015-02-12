@@ -8,7 +8,7 @@ $(document).ready(function() {
     var featureLayer = L.mapbox.featureLayer()
         .loadURL('/data_display/cso_test_file.geojson')
        .addTo(map)
-       .bindPopup(function(layer){layer.feature.properties.Time_stamp});
+       .bindPopup("howdy 2");
 
     //featureLayer.on(function(layer) {
 
