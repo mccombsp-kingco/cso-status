@@ -9,7 +9,7 @@ $(document).ready(function() {
         .loadURL('/data_display/cso_test_file.geojson')
        .addTo(map);
 
-    featureLayer.on('ready', function(layer) {
+    featureLayer.eachLayer(function(layer) {
 
     // here you call `bindPopup` with a string of HTML you create - the feature
     // properties declared in geoJSON file are available under `layer.feature.properties`
