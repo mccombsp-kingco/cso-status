@@ -8,6 +8,7 @@ $(document).ready(function() {
     var featureLayer = L.mapbox.featureLayer()
         .loadURL('/data_display/cso_test_file.geojson')
        .addTo(map);
+       .bindPopup('Howdy')
 
     //featureLayer.eachLayer(function(layer) {
 
