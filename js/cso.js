@@ -9,11 +9,16 @@ $(document).ready(function() {
         .loadURL('/data_display/cso_test_file.geojson')
        .addTo(map);
 
-    featureLayer.on('ready', function(layer) {
+    featureLayer.on('ready', function(layer, feature) {
 
     // here you call `bindPopup` with a string of HTML you create - the feature
-    // properties declared above are available under `layer.feature.properties`
-    layer.bindPopup('<table><tr><td><strong>'+feature.properties.CSO_TagName+' '+feature.properties.DSN+' '+feature.properties.Name+'</strong></td></tr><tr><td>'+feature.properties.description+': '+feature.properties.Time_stamp+'</td></tr></table>')
+    // properties declared in geoJSON file are available under `layer.feature.properties`
+
+    var content = '<strong>'+.feature.properties.CSO_TagName+' '+feature.properties.DSN+
+              ' '+feature.properties.Name+'</strong>'+
+              feature.properties.description+': '+feature.properties.Time_stamp;
+
+    layer.bindPopup(content)
  });
 
 
