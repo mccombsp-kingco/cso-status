@@ -7,7 +7,20 @@ $(document).ready(function() {
 
     var featureLayer = L.mapbox.featureLayer()
         .loadURL('/data_display/cso_test_file.geojson')
-        .addTo(map);
+       .addTo(map);
+       //.bindPopup("howdy 2");
+
+
+
+              //'<strong>'+layer.feature.properties.CSO_TagName+' '+layer.feature.properties.DSN+
+              //' '+layer.feature.properties.Name+'</strong>'+
+              //layer.feature.properties.description+': '+layer.feature.properties.Time_stamp;
+    featureLayer.on('ready', function() {
+    // featureLayer.getBounds() returns the corners of the furthest-out markers,
+    // and map.fitBounds() makes sure that the map contains these.
+    featureLayer.bindPopup('howdy 4');
+    });
+
 
     var southWest = L.latLng(48.039701, -122.409571),
     northEast = L.latLng(48.040085, -122.405913),
