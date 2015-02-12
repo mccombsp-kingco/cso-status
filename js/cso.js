@@ -8,9 +8,9 @@ $(document).ready(function() {
     var featureLayer = L.mapbox.featureLayer()
         .loadURL('/data_display/cso_test_file.geojson')
        .addTo(map)
-       .bindPopup('Howdy');
-       
-    //featureLayer.eachLayer(function(layer) {
+       .bindPopup(function(layer){layer.feature.properties.Time_stamp});
+
+    //featureLayer.on(function(layer) {
 
     // here you call `bindPopup` with a string of HTML you create - the feature
     // properties declared in geoJSON file are available under `layer.feature.properties`
