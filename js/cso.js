@@ -5,9 +5,14 @@ $(document).ready(function() {
 
     var map = L.map('map', {maxZoom: 22}).setView([47.619124, -122.3272], 12);
 
-    var featureLayer = L.mapbox.featureLayer()
+    var featureLayer = L.mapbox.featureLayer({
+      onEachFeature: function (feature, layer) {
+    layer.bindPopup('<table><tr><td><strong>'+feature.properties.CSO_TagName+' '+feature.properties.DSN+' '+feature.properties.Name+'</strong></td></tr><tr><td>'+feature.properties.description+': '+feature.properties.Time_stamp+'</td></tr></table>');
+  })
         .loadURL('/data_display/cso_test_file.geojson')
         .addTo(map);
+
+
 
     var southWest = L.latLng(48.039701, -122.409571),
     northEast = L.latLng(48.040085, -122.405913),
