@@ -18,7 +18,7 @@ $(document).ready(function() {
     featureLayer.on('ready', function() {
     // featureLayer.getBounds() returns the corners of the furthest-out markers,
     // and map.fitBounds() makes sure that the map contains these.
-    featureLayer.bindPopup('<strong>'+layer.feature.properties.CSO_TagName+'</strong>');
+    featureLayer.bindPopup('<strong>'+featureLayer.feature.properties.CSO_TagName+'</strong>');
     });
 
 
