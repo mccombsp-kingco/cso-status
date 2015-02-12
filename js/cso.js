@@ -14,9 +14,11 @@ $(document).ready(function() {
     // here you call `bindPopup` with a string of HTML you create - the feature
     // properties declared in geoJSON file are available under `layer.feature.properties`
 
-    var content = '<strong>'+layer.feature.properties.CSO_TagName+' '+layer.feature.properties.DSN+
-              ' '+layer.feature.properties.Name+'</strong>'+
-              layer.feature.properties.description+': '+layer.feature.properties.Time_stamp;
+    var content = "howdy"
+
+              //'<strong>'+layer.feature.properties.CSO_TagName+' '+layer.feature.properties.DSN+
+              //' '+layer.feature.properties.Name+'</strong>'+
+              //layer.feature.properties.description+': '+layer.feature.properties.Time_stamp;
 
     layer.bindPopup(content)
  });
