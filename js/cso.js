@@ -10,29 +10,23 @@ $(document).ready(function() {
        //.addTo(map);
        //.bindPopup("howdy 2");
 
+    //'<strong>'+layer.feature.properties.CSO_TagName+' '+layer.feature.properties.DSN+
+    //' '+layer.feature.properties.Name+'</strong>'+
+    //layer.feature.properties.description+': '+layer.feature.properties.Time_stamp;
 
-
-              //'<strong>'+layer.feature.properties.CSO_TagName+' '+layer.feature.properties.DSN+
-              //' '+layer.feature.properties.Name+'</strong>'+
-              //layer.feature.properties.description+': '+layer.feature.properties.Time_stamp;
-        .on('ready', function(layer) {
-            this.eachLayer(function(marker) {
-                // See the following for styling hints:
-                // https://help.github.com/articles/mapping-geojson-files-on-github#styling-features
-                marker.setIcon(L.mapbox.marker.icon({
-                    'marker-color': '#CC0000'
-                }));
-            });
-        })
-        .addTo(map);
-
-
-    //featureLayer.on('ready', function() {
+    featureLayer.on('layeradd', function(e) {
     // featureLayer.getBounds() returns the corners of the furthest-out markers,
     // and map.fitBounds() makes sure that the map contains these.
-    //featureLayer.bindPopup('howdy 4');
-    //});
+      var marker = e.layer,
+          feature = marker.feature;
 
+      var popupContent =  '<h2>our data<\/h2>' +
+          '<p>DSN: ' + feature.properties.DSN + '<br \/>' +
+          'CSO_Status: ' + feature.properties.CSO_Status + '<br \/>' +
+          'Name: ' + feature.properties.Name + '<br \/>' + '<\/p>';
+      featureLayer.bindPopup(popupContent);
+    //featureLayer.bindPopup('howdy 5');
+    });
 
     var southWest = L.latLng(48.039701, -122.409571),
     northEast = L.latLng(48.040085, -122.405913),
