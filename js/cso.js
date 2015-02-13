@@ -18,7 +18,7 @@ $(document).ready(function() {
         .on('ready', function(layer) {
             this.eachLayer(function(feature) {
                 feature.bindPopup("howdy 5")
-                }));
+                });
             });
         })
         .addTo(map);
