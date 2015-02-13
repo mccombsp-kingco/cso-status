@@ -7,8 +7,8 @@ $(document).ready(function() {
 
     var featureLayer = L.mapbox.featureLayer()
         .loadURL('/data_display/cso_test_file.geojson')
-        //.addTo(map);
-        //.bindPopup("howdy 2");
+       //.addTo(map);
+       //.bindPopup("howdy 2");
 
 
 
@@ -16,13 +16,15 @@ $(document).ready(function() {
               //' '+layer.feature.properties.Name+'</strong>'+
               //layer.feature.properties.description+': '+layer.feature.properties.Time_stamp;
         .on('ready', function(layer) {
-            this.eachLayer(function(feature) {
-                feature.bindPopup("howdy 5")
-                });
+            this.eachLayer(function(marker) {
+                // See the following for styling hints:
+                // https://help.github.com/articles/mapping-geojson-files-on-github#styling-features
+                marker.setIcon(L.mapbox.marker.icon({
+                    'marker-color': '#CC0000'
+                }));
             });
         })
         .addTo(map);
-
 
 
     //featureLayer.on('ready', function() {
