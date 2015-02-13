@@ -20,7 +20,7 @@ $(document).ready(function() {
           '<p>DSN: ' + feature.properties.DSN + '<br \/>' +
           'CSO_Status: ' + feature.properties.CSO_Status + '<br \/>' +
           'Name: ' + feature.properties.Name + '<br \/>' + '<\/p>';
-      featureLayer.bindPopup(popupContent);
+      marker.bindPopup(popupContent);
     });
 
     var southWest = L.latLng(48.039701, -122.409571),
