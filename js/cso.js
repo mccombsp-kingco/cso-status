@@ -17,7 +17,7 @@ $(document).ready(function() {
               //layer.feature.properties.description+': '+layer.feature.properties.Time_stamp;
         .on('ready', function(layer) {
             this.eachLayer(function(feature) {
-                .bindPopup("howdy 5")
+                feature.bindPopup("howdy 5")
                 }));
             });
         })
