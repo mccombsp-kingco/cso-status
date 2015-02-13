@@ -7,12 +7,8 @@ $(document).ready(function() {
 
     var featureLayer = L.mapbox.featureLayer()
         .loadURL('/data_display/cso_test_file.geojson')
-       //.addTo(map);
-       //.bindPopup("howdy 2");
+        .addTo(map);
 
-    //'<strong>'+layer.feature.properties.CSO_TagName+' '+layer.feature.properties.DSN+
-    //' '+layer.feature.properties.Name+'</strong>'+
-    //layer.feature.properties.description+': '+layer.feature.properties.Time_stamp;
 
     featureLayer.on('layeradd', function(e) {
     // featureLayer.getBounds() returns the corners of the furthest-out markers,
@@ -25,7 +21,6 @@ $(document).ready(function() {
           'CSO_Status: ' + feature.properties.CSO_Status + '<br \/>' +
           'Name: ' + feature.properties.Name + '<br \/>' + '<\/p>';
       featureLayer.bindPopup(popupContent);
-    //featureLayer.bindPopup('howdy 5');
     });
 
     var southWest = L.latLng(48.039701, -122.409571),
