@@ -21,13 +21,13 @@ $(document).ready(function() {
             decodedStatus = 'CSO Discharging now'
             break;
         case '2':
-            ecodedStatus = 'CSO Discharged in last 48 hours'
+            decodedStatus = 'CSO Discharged in last 48 hours'
             break;
         case '3':
-            ecodedStatus = 'CSO Not Discharging'
+            decodedStatus = 'CSO Not Discharging'
             break;
         case '4':
-            ecodedStatus = 'Real time data not available'
+            decodedStatus = 'Real time data not available'
             break;
         default:
             decodedStatus = 'Error'
