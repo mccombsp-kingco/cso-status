@@ -16,9 +16,27 @@ $(document).ready(function() {
       var marker = e.layer,
           feature = marker.feature;
 
+      var 
+      switch(feature.properties.CSO_Status) {
+        case '1':
+            decodedStatus = 'CSO Discharging now'
+            break;
+        case '2':
+            ecodedStatus = 'CSO Discharged in last 48 hours'
+            break;
+        case '3':
+            ecodedStatus = 'CSO Not Discharging'
+            break;
+        case '4':
+            ecodedStatus = 'Real time data not available'
+            break;
+        default:
+            decodedStatus = 'Error'
+        };
+
       var popupContent =  '<h2>our data<\/h2>' +
           '<p>DSN: ' + feature.properties.DSN + '<br \/>' +
-          'CSO_Status: ' + feature.properties.CSO_Status + '<br \/>' +
+          'CSO_Status: ' + decodedStatus + '<br \/>' +
           'Name: ' + feature.properties.Name + '<br \/>' + '<\/p>';
       marker.bindPopup(popupContent);
     });
