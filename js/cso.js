@@ -35,7 +35,7 @@ $(document).ready(function() {
 
       var popupContent =  '<h2>our data<\/h2>' +
           '<p>DSN: ' + feature.properties.DSN + '<br \/>' +
-          'Discharge Status: ' + description + '<br \/>' +
+          'Discharge Status: ' + feature.properties.description + '<br \/>' +
           'Name: ' + feature.properties.Name + '<br \/>' + '<\/p>';
       marker.bindPopup(popupContent);
     });
