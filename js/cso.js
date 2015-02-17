@@ -33,10 +33,14 @@ $(document).ready(function() {
       //       decodedStatus = 'Error'
       //   };
 
-      var popupContent =  '<h2>our data<\/h2>' +
-          '<p>DSN: ' + feature.properties.DSN + '<br \/>' +
-          'Discharge Status: ' + feature.properties.description + '<br \/>' +
-          'Name: ' + feature.properties.Name + '<br \/>' + '<\/p>';
+      var popupContent =  '<h2>CSO Status<\/h2>' +
+        '<p>Name: ' + feature.properties.Name + '<br \/>' + '<\/p>' +
+        'CSO Status: ' + feature.properties.CSO_Status + '<br \/>' +
+        'Description: ' + feature.properties.description + '<br \/>' +
+        'DSN: ' + feature.properties.DSN + '<br \/>' +
+         'Location(Lon/Lat): ' + feature.properties.Location(Lon/Lat) + '<br \/>'+
+         'Time_stamp: ' + feature.properties.Time_stamp + '<br \/>';
+
       marker.bindPopup(popupContent);
     });
 
