@@ -1,5 +1,5 @@
 var map, layerControl, rsidebar, lsidebar, drawControl, drawnItems = null;
-var autocompdata = [];
+//var autocompdata = [];
 
 $(document).ready(function() {
 
