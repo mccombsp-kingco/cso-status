@@ -13,8 +13,8 @@ $(document).ready(function() {
     featureLayer.on('layeradd', function(e) {
     // featureLayer.getBounds() returns the corners of the furthest-out markers,
     // and map.fitBounds() makes sure that the map contains these.
-      // var marker = e.layer,
-      //     feature = marker.feature;
+       var marker = e.layer,
+           feature = marker.feature;
 
       // switch(feature.properties.CSO_Status) {
       //   case '1':
