@@ -16,7 +16,6 @@ $(document).ready(function() {
       var marker = e.layer,
           feature = marker.feature;
 
-      var 
       switch(feature.properties.CSO_Status) {
         case '1':
             decodedStatus = 'CSO Discharging now'
