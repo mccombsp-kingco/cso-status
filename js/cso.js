@@ -13,25 +13,25 @@ $(document).ready(function() {
     featureLayer.on('layeradd', function(e) {
     // featureLayer.getBounds() returns the corners of the furthest-out markers,
     // and map.fitBounds() makes sure that the map contains these.
-      var marker = e.layer,
-          feature = marker.feature;
+      // var marker = e.layer,
+      //     feature = marker.feature;
 
-      switch(feature.properties.CSO_Status) {
-        case '1':
-            decodedStatus = 'CSO Discharging now'
-            break;
-        case '2':
-            decodedStatus = 'CSO Discharged in last 48 hours'
-            break;
-        case '3':
-            decodedStatus = 'CSO Not Discharging'
-            break;
-        case '4':
-            decodedStatus = 'Real time data not available'
-            break;
-        default:
-            decodedStatus = 'Error'
-        };
+      // switch(feature.properties.CSO_Status) {
+      //   case '1':
+      //       decodedStatus = 'CSO Discharging now'
+      //       break;
+      //   case '2':
+      //       decodedStatus = 'CSO Discharged in last 48 hours'
+      //       break;
+      //   case '3':
+      //       decodedStatus = 'CSO Not Discharging'
+      //       break;
+      //   case '4':
+      //       decodedStatus = 'Real time data not available'
+      //       break;
+      //   default:
+      //       decodedStatus = 'Error'
+      //   };
 
       var popupContent =  '<h2>our data<\/h2>' +
           '<p>DSN: ' + feature.properties.DSN + '<br \/>' +
