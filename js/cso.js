@@ -38,7 +38,7 @@ $(document).ready(function() {
         'CSO Status: ' + feature.properties.CSO_Status + '<br \/>' +
         'Description: ' + feature.properties.description + '<br \/>' +
         'DSN: ' + feature.properties.DSN + '<br \/>' +
-         'Location(Lon/Lat): ' + feature.properties."Location(Lon\/Lat)" + '<br \/>'+
+         'Location(Lon/Lat): ' + feature.properties.Location"(Lon\/Lat)" + '<br \/>'+
          'Time_stamp: ' + feature.properties.Time_stamp + '<br \/>';
 
       marker.bindPopup(popupContent);
