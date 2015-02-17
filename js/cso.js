@@ -35,7 +35,7 @@ $(document).ready(function() {
 
       var popupContent =  '<h2>CSO Status<\/h2>' +
         '<p>Name: ' + feature.properties.Name + '<br \/>' + '<\/p>' +
-        'CSO Status: ' + feature.properties.CSO_Status + '<br \/>' +
+        //'CSO Status: ' + feature.properties.CSO_Status + '<br \/>' +
         'Description: ' + feature.properties.description + '<br \/>' +
         'DSN: ' + feature.properties.DSN + '<br \/>' +
         'Location(Long/Lat): ' + feature.properties.Location + '<br \/>'+
