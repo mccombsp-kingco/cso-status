@@ -1,6 +1,7 @@
 var map, layerControl, rsidebar, lsidebar, drawControl, drawnItems = null;
 //var autocompdata = [];
-
+L.mapbox.accessToken = 'pk.eyJ1IjoibWFwaXRwayIsImEiOiIxMk5pN0drIn0.RoUFzCiXmh0xYCwmuXYCRw';
+var map = L.mapbox.map('map', 'mapbox.streets')
 $(document).ready(function() {
 
     var map = L.map('map', {maxZoom: 22}).setView([47.619124, -122.3272], 12);
