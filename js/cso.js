@@ -56,7 +56,7 @@ $(document).ready(function() {
     layerControl = L.control.layers({
         'Base Map': L.mapbox.tileLayer('mapbox.streets').addTo(map),
         'Grey Map': L.mapbox.tileLayer('mapbox.light'),
-        'Satellite Map': L.mapbox.tileLayer('mapbox.Satellite'),
+        'Satellite Map': L.mapbox.tileLayer('mapbox.satellite'),
         'Pencil Map': L.mapbox.tileLayer('mapbox.pencil')
     },{
        // "Quadcopter Stitch": tileLayer,
