@@ -55,7 +55,8 @@ $(document).ready(function() {
 
     layerControl = L.control.layers({
         'Base Map': L.mapbox.tileLayer('mapbox.streets').addTo(map),
-        'Satellite Map': L.mapbox.tileLayer('mapbox.satellite')
+        'Satellite Map': L.mapbox.tileLayer('mapbox.satellite'),
+        'Outdoors': L.mapbox.tileLayer('mapbox.outdoors')
     }, {
        // "Quadcopter Stitch": tileLayer,
         "CSO Status": featureLayer
