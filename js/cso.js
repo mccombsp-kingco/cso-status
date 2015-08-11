@@ -58,7 +58,7 @@ $(document).ready(function() {
         'Grey Map': L.mapbox.tileLayer('mapbox.light'),
         'Satellite Map': L.mapbox.tileLayer('mapbox.Satellite'),
         'Pencil Map': L.mapbox.tileLayer('mapbox.pencil')
-
+    },{
        // "Quadcopter Stitch": tileLayer,
         "CSO Status": featureLayer
     },{'collapsed': false});
