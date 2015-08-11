@@ -51,7 +51,7 @@ $(document).ready(function() {
     //var tileLayer = L.tileLayer('/gisdata/tiles/langley-2nd-street-2014/{z}/{x}/{y}.png', {foo: 'bar', tms: true, minZoom:1, maxZoom:22, bounds:bounds}).addTo(map);
 
     layerControl = L.control.layers({
-        'Base Map': L.mapbox.tileLayer('examples.map-vyofok3q').addTo(map),
+        'Base Map': L.mapbox.tileLayer('examples.map-i87786ca').addTo(map),
         'Grey Map': L.mapbox.tileLayer('examples.map-20v6611k')
     }, {
        // "Quadcopter Stitch": tileLayer,
