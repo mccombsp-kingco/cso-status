@@ -8,9 +8,9 @@ $(document).ready(function() {
 
     var map = L.map('map', {maxZoom: 22}).setView([47.619124, -122.3272], 12);
 
-    var redsquare = new L.Icon({
-      iconUrl: 'symbols/square_red_16.png'
-    });
+    // var redsquare = new L.Icon({
+    //   iconUrl: 'symbols/square_red_16.png'
+    // });
 
     var featureLayer = L.mapbox.featureLayer()
         .loadURL('/data_display/cso_test_file.geojson')
@@ -32,7 +32,7 @@ $(document).ready(function() {
         'Location(Long/Lat): ' + feature.properties.Location + '<br \/>'+
          'Time_stamp: ' + feature.properties.Time_stamp + '<br \/>';
 
-      marker.setIcon(redsquare);
+//      marker.setIcon(redsquare);
       marker.bindPopup(popupContent);
     });
 
