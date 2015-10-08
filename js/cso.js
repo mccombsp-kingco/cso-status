@@ -8,6 +8,10 @@ $(document).ready(function() {
 
     var map = L.map('map', {maxZoom: 22}).setView([47.619124, -122.3272], 12);
 
+    var redsquare = new L.Icon({
+      iconUrl: 'symbols/square_red_16.png'
+    });
+
     var featureLayer = L.mapbox.featureLayer()
         .loadURL('/data_display/cso_test_file.geojson')
         .addTo(map);
@@ -19,22 +23,6 @@ $(document).ready(function() {
        var marker = e.layer,
            feature = marker.feature;
 
-      // switch(feature.properties.CSO_Status) {
-      //   case '1':
-      //       decodedStatus = 'CSO Discharging now'
-      //       break;
-      //   case '2':
-      //       decodedStatus = 'CSO Discharged in last 48 hours'
-      //       break;
-      //   case '3':
-      //       decodedStatus = 'CSO Not Discharging'
-      //       break;
-      //   case '4':
-      //       decodedStatus = 'Real time data not available'
-      //       break;
-      //   default:
-      //       decodedStatus = 'Error'
-      //   };
 
       var popupContent =  '<h2>CSO Status<\/h2>' +
         '<p>Name: ' + feature.properties.Name + '<br \/>' + '<\/p>' +
@@ -44,6 +32,7 @@ $(document).ready(function() {
         'Location(Long/Lat): ' + feature.properties.Location + '<br \/>'+
          'Time_stamp: ' + feature.properties.Time_stamp + '<br \/>';
 
+      marker.setIcon(redsquare);
       marker.bindPopup(popupContent);
     });
 
