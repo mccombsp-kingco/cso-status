@@ -25,14 +25,15 @@ $(document).ready(function() {
 
 
       var popupContent =  '<h2>CSO Status<\/h2>' +
-        '<p>Name: ' + feature.properties.Name + '<br \/>' + '<\/p>' +
+        feature.properties.Name + '<br \/>' + 
         //'CSO Status: ' + feature.properties.CSO_Status + '<br \/>' +
-        'Description: ' + feature.properties.description + '<br \/>' +
-        'DSN: ' + feature.properties.DSN + '<br \/>' +
+        'Overflow Status: ' + feature.properties.description + '<br \/>' +
+        'Seattle/KC Outfall #: ' + feature.properties.DSN + '<br \/>' +
         'Location(Long/Lat): ' + feature.properties.Location + '<br \/>'+
-         'Time_stamp: ' + feature.properties.Time_stamp + '<br \/>';
+         'Time: ' + feature.properties.Time_stamp + '<br \/>';
 
 //      marker.setIcon(redsquare);
+      marker.setIcon(L.icon(feature.properties.icon));
       marker.bindPopup(popupContent);
     });
 
@@ -45,8 +46,8 @@ $(document).ready(function() {
     layerControl = L.control.layers({
         'Base Map': L.mapbox.tileLayer('mapbox.streets').addTo(map),
         'Grey Map': L.mapbox.tileLayer('mapbox.light'),
-        'Satellite Map': L.mapbox.tileLayer('mapbox.satellite'),
-        'Pencil Map': L.mapbox.tileLayer('mapbox.pencil')
+        //'Satellite Map': L.mapbox.tileLayer('mapbox.satellite'),
+        //'Pencil Map': L.mapbox.tileLayer('mapbox.pencil')
     },{
        // "Quadcopter Stitch": tileLayer,
         "CSO Status": featureLayer
@@ -54,43 +55,5 @@ $(document).ready(function() {
 
     layerControl.addTo(map);
 
-/*
-    // Test getting layers
-    $.getJSON( "/gisdata/geojson/filelist.json").done(function( data ) {
-        proj4defs = data;
-        $.each( data, function( key, val ) {
-            for( var indx = 0; indx < val.length; indx ++ ){
-                var filename = val[indx];
-                autocompdata.push({label:filename,value:filename})
-            }
-        });
-        $( "#projection" ).autocomplete({
-            source: autocompdata,
-            minLength: 0,
-            select: function( event, ui ) {
-                var filename = ui.item.value;
-                var featureLayer = L.mapbox.featureLayer()
-                    .loadURL('/gisdata/geojson/'+filename)
-                    .addTo(map);
-                layerControl.addOverlay(featureLayer,filename);
-                // Try to remove from autocomplete list
-                for( var indx = 0; indx < autocompdata.length; indx++ ){
-                    if (autocompdata[indx].value == filename) {
-                        var index = autocompdata.indexOf(filename);
-                        autocompdata.splice(indx, 1);
-                        $( "#projection" ).autocomplete( "option", "source", autocompdata);
 
-                    }
-                }
-                return false;
-            }
-        }).val('');
-        $('#projection').on( 'click', function(evt){
-             $( "#projection" ).autocomplete(  "search", "" );
-        });
-    }).fail(function( jqxhr, textStatus, error ) {
-        var err = textStatus + ", " + error;
-        console.log( "Request Failed: " + err );
-    });
-*/
 });
