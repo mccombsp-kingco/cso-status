@@ -50,7 +50,7 @@ $(document).ready(function() {
         //'Pencil Map': L.mapbox.tileLayer('mapbox.pencil')
     },{
        // "Quadcopter Stitch": tileLayer,
-        "CSO Status": featureLayer
+       // "CSO Status": featureLayer
     },{'collapsed': false});
 
     layerControl.addTo(map);
