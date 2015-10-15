@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 
       var popupContent =  '<h2>CSO Status<\/h2>' +
-        'Name ' + feature.properties.Name + '<br \/>' + 
+        'Name- ' + feature.properties.Name + '<br \/>' + 
         //'CSO Status: ' + feature.properties.CSO_Status + '<br \/>' +
         'Overflow Status: ' + feature.properties.description + '<br \/>' +
         'Outfall #: ' + feature.properties.DSN + '<br \/>' +
