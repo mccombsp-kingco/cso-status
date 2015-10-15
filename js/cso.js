@@ -28,7 +28,7 @@ $(document).ready(function() {
         feature.properties.Name + '<br \/>' + 
         //'CSO Status: ' + feature.properties.CSO_Status + '<br \/>' +
         'Overflow Status: ' + feature.properties.description + '<br \/>' +
-        'Seattle/KC Outfall #: ' + feature.properties.DSN + '<br \/>' +
+        'Outfall #: ' + feature.properties.DSN + '<br \/>' +
         'Location(Long/Lat): ' + feature.properties.Location + '<br \/>'+
          'Time: ' + feature.properties.Time_stamp + '<br \/>';
 
