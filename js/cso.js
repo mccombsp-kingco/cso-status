@@ -33,7 +33,7 @@ $(document).ready(function() {
          'Time: ' + feature.properties.Time_stamp + '<br \/>';
 
 //      marker.setIcon(redsquare);
-      marker.setIcon(L.icon(feature.properties.icon));
+      //marker.setIcon(L.icon(feature.properties.icon));
       marker.bindPopup(popupContent);
     });
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
         //'Pencil Map': L.mapbox.tileLayer('mapbox.pencil')
     },{
        // "Quadcopter Stitch": tileLayer,
-        "CSO Status": featureLayer
+       // "CSO Status": featureLayer
     },{'collapsed': false});
 
     layerControl.addTo(map);
