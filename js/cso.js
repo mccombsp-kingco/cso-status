@@ -43,8 +43,8 @@ $(document).ready(function() {
     //var tileLayer = L.tileLayer('/gisdata/tiles/langley-2nd-street-2014/{z}/{x}/{y}.png', {foo: 'bar', tms: true, minZoom:1, maxZoom:22, bounds:bounds}).addTo(map);
 
     layerControl = L.control.layers({
-        'Base Map': L.mapbox.tileLayer('mapbox.streets').addTo(map),
-        'Grey Map': L.mapbox.tileLayer('mapbox.light'),
+        //'Base Map': L.mapbox.tileLayer('mapbox.streets').addTo(map),
+        //'Grey Map': L.mapbox.tileLayer('mapbox.light'),
         //'Satellite Map': L.mapbox.tileLayer('mapbox.satellite'),
         //'Pencil Map': L.mapbox.tileLayer('mapbox.pencil')
     },{
