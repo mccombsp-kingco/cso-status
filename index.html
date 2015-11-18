@@ -3,7 +3,7 @@
 <head>
 <meta charset=utf-8 />
 <title>Legend Map</title>
-<meta http-equiv="refresh" content="10">
+<meta http-equiv="refresh" content="5">
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 -<script src="js/jquery-1.11.2.min.js"></script>
 -<script src="js/jquery-ui.js"></script>
@@ -14,21 +14,26 @@
 
 <style>
   body { margin:0; padding:0; }
-  #map { position:absolute; top:15; bottom:0; width:90%; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
   #projection_div { position:absolute; top:0; left:40%; }
   .ui-autocomplete { height: 400px; overflow-y: scroll; overflow-x: hidden;}
-  .refresher {
-    z-index: 3;
-    right: 0px;
-    top: 0px;
-    position: absolute;
-  }
+  /*#layer-find-ui {
+  position: absolute;
+  top: 0px;
+  left: 35%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  }*/
 </style>
 </head>
 <body>
-
-<div id='map'></div>
 <div id='refresher'>Ah! Refreshing!</div>
+<div id='map'></div>
+<!-- <ul id="layer-find-ui"> -->
+  <li><input id="projection" size="40"/></li>
+</ul>
 
 </body>
 <script src='js/cso.js'></script>
